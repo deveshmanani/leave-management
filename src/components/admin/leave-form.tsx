@@ -109,7 +109,9 @@ export function LeaveForm({ user, onSuccess, onClose }: LeaveFormProps) {
             onValueChange={(v) => setLeaveType(v as LeaveType)}
           >
             <SelectTrigger id="leaveType">
-              <SelectValue />
+              <SelectValue>
+                {leaveType === "regular" ? "Vacation" : "Sick"}
+              </SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="regular">Vacation</SelectItem>
