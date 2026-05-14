@@ -85,7 +85,7 @@ export function UserTable({ users: initialUsers }: UserTableProps) {
                 <TableHead>Name</TableHead>
                 <TableHead className="hidden sm:table-cell">Email</TableHead>
                 <TableHead>Role</TableHead>
-                <TableHead className="text-right">Regular</TableHead>
+                <TableHead className="text-right">Vacation</TableHead>
                 <TableHead className="text-right">Sick</TableHead>
                 <TableHead className="text-right">Total</TableHead>
                 <TableHead className="text-right">Actions</TableHead>

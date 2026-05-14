@@ -35,6 +35,10 @@ function formatChange(amount: number) {
   return `${prefix}${amount}`;
 }
 
+function leaveTypeLabel(type: string) {
+  return type === "regular" ? "vacation" : type;
+}
+
 export function RecentActivity({ history, limit = 5 }: RecentActivityProps) {
   const items = history.slice(0, limit);
 
@@ -87,7 +91,7 @@ export function RecentActivity({ history, limit = 5 }: RecentActivityProps) {
                         }
                         className="capitalize"
                       >
-                        {item.leaveType}
+                        {leaveTypeLabel(item.leaveType)}
                       </Badge>
                     </TableCell>
                     <TableCell

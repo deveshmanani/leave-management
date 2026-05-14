@@ -42,7 +42,7 @@ export function LeaveManagementDialog({
 
         <div className="mb-4 grid grid-cols-3 gap-3 rounded-lg border bg-muted/50 p-3 text-center text-sm">
           <div>
-            <p className="text-muted-foreground">Regular</p>
+            <p className="text-muted-foreground">Vacation</p>
             <p className="text-lg font-bold">{user.regularLeave}</p>
           </div>
           <div>

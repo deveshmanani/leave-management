@@ -14,10 +14,10 @@ interface LeaveBalanceCardsProps {
 const CARDS = [
   {
     key: "regular" as const,
-    title: "Regular Leave",
+    title: "Vacation Leave",
     icon: CalendarDays,
     field: "regularLeave" as keyof LeaveBalance,
-    description: "Available regular leave days",
+    description: "Available vacation leave days",
   },
   {
     key: "sick" as const,

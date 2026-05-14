@@ -50,8 +50,9 @@ export function LeaveForm({ user, onSuccess, onClose }: LeaveFormProps) {
       const current =
         leaveType === "regular" ? user.regularLeave : user.sickLeave;
       if (current - num < 0) {
+        const typeLabel = leaveType === "regular" ? "vacation" : leaveType;
         setError(
-          `Cannot deduct ${num}. Current ${leaveType} balance is ${current}`
+          `Cannot deduct ${num}. Current ${typeLabel} balance is ${current}`
         );
         return false;
       }
@@ -83,8 +84,9 @@ export function LeaveForm({ user, onSuccess, onClose }: LeaveFormProps) {
           return;
         }
 
+        const toastLabel = leaveType === "regular" ? "vacation" : leaveType;
         toast.success(
-          `Leave updated: ${actionType === "deduct" ? "-" : "+"}${amount} ${leaveType} for ${user.name}`
+          `Leave updated: ${actionType === "deduct" ? "-" : "+"}${amount} ${toastLabel} for ${user.name}`
         );
 
         onSuccess(data.data.regularLeave, data.data.sickLeave);
@@ -110,7 +112,7 @@ export function LeaveForm({ user, onSuccess, onClose }: LeaveFormProps) {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="regular">Regular</SelectItem>
+              <SelectItem value="regular">Vacation</SelectItem>
               <SelectItem value="sick">Sick</SelectItem>
             </SelectContent>
           </Select>

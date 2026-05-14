@@ -40,6 +40,10 @@ function formatChange(amount: number) {
   return `${prefix}${amount}`;
 }
 
+function leaveTypeLabel(type: string) {
+  return type === "regular" ? "vacation" : type;
+}
+
 export function LeaveHistoryTable({
   history,
   showUser = false,
@@ -90,7 +94,7 @@ export function LeaveHistoryTable({
                     }
                     className="capitalize"
                   >
-                    {item.leaveType}
+                    {leaveTypeLabel(item.leaveType)}
                   </Badge>
                 </TableCell>
                 <TableCell>

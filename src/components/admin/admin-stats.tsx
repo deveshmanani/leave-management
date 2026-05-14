@@ -24,10 +24,10 @@ export function AdminStats({ users }: AdminStatsProps) {
       description: "Registered in the system",
     },
     {
-      title: "Regular Leave Pool",
+      title: "Vacation Leave Pool",
       value: totalRegular,
       icon: CalendarDays,
-      description: "Total regular leave across all employees",
+      description: "Total vacation leave across all employees",
     },
     {
       title: "Sick Leave Pool",
